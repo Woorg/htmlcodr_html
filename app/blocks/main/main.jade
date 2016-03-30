@@ -1,0 +1,10 @@
+include ../content/content
+include ../sidebar/sidebar
+
+
+mixin main()
+	+b('main').main&attributes(attributes)
+		+e.in
+			+content()
+			+sidebar()
+

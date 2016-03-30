@@ -1,0 +1,20 @@
+mixin header()
+	+b.header&attributes(attributes)
+		+e.in
+			+b('a').logo(href='#index')
+				+icon('logo-icon').icon
+				| Htmlcodr
+			+b('nav').main-nav
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#') Главная
+					+e('li').item
+						+e('a').link(href='#') Html верстка
+					+e('li').item
+						+e('a').link(href='#') Wordpress
+					+e('li').item
+						+e('a').link(href='#') Seo
+					+e('li').item
+						+e('a').link(href='#') Стартапы
+					+e('li').item
+						+e('a').link(href='#')

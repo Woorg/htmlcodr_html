@@ -1,0 +1,55 @@
+mixin sidebar()
+	+b.sidebar&attributes(attributes)
+		+b.vital.sidebar-block
+			+e.w
+				| <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				| <!-- sidebar_htmlcodr_responsive -->
+				| <ins class="adsbygoogle"
+				|      style="display:block"
+				|      data-ad-client="ca-pub-0634695143666394"
+				|      data-ad-slot="6701639159"
+				|      data-ad-format="auto"></ins>
+				| <script>
+				| (adsbygoogle = window.adsbygoogle || []).push({});
+				| </script>
+		+b.subscribe.sidebar-block
+			+e('h2').title Подпишитесь на обновления
+			+e('p').text Введите свою почту и раз в месяц мы будем присылать вам самые популярные материалы
+
+			+e('form').form
+				+e('input').input(type='text' placeholder='Введите свою почту')
+				+e('input').submit(type='submit' value="Отправить")
+		+b.social.sidebar-block
+			+e('h2').title Подпишитесь на обновления в социальных сетях
+
+		+b.tags.sidebar-block
+			+e('h2').title Тэги
+			+e('ul').list
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+				+b('li').tag
+					+e('a').link(href='#') Tag link
+
+		+b.vital._second._sticky.sidebar-block
+			+e.w
+				| <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				| <!-- sidebar_htmlcodr_300_600 -->
+				| <ins class="adsbygoogle"
+				|      style="display:inline-block;width:300px;height:600px"
+				|      data-ad-client="ca-pub-0634695143666394"
+				|      data-ad-slot="7979895950"></ins>
+				| <script>
+				| (adsbygoogle = window.adsbygoogle || []).push({});
+				| </script>

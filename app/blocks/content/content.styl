@@ -1,0 +1,95 @@
+.content
+	width 815px
+	float left
+
+
+.article
+	margin-bottom 50px
+	padding 25px
+	background $article-bg
+	box-shadow 0px 0px 2px 0px rgba( 0, 0, 0, .1)
+	clearfix()
+	&__link
+		display block
+		text-decoration none
+		color $text-color
+
+		&:hover
+			.article__title
+				color lighten($headings-color, 20)
+	&__header
+		text-align center
+	&__category
+		margin-bottom 7px
+		display inline-block
+		font-size 16px
+		font-weight 400
+		line-height 18px
+		color $headings-color
+	&__title
+		margin-bottom 21px
+		// font-family $rubik-medium
+		font-family $museo-sans
+		font-weight 700
+		font-size 42px
+		color $headings-color
+		line-height 1.2
+		text-align left
+		transition all .3s ease
+	&__details
+		margin-bottom 30px
+		font-size 0
+		text-align left
+		clearfix()
+	&__date
+		margin-right 48px
+		display inline-block
+		font-size 16px
+		color #9E9E9E
+	&__date-icon
+		margin-right 10px
+		display inline-block
+		vertical-align bottom
+		width 20px
+		height 20px
+		fill #9E9E9E
+	&__author
+		margin-right 48px
+		display inline-block
+		font-size 16px
+		color #9E9E9E
+	&__author-icon
+		margin-right 10px
+		display inline-block
+		vertical-align bottom
+		width 20px
+		height 20px
+		fill #9E9E9E
+	&__comments
+		margin-right 48px
+		display inline-block
+		font-size 16px
+		color #9E9E9E
+	&__comments-icon
+		margin-right 10px
+		display inline-block
+		vertical-align bottom
+		width 20px
+		height 20px
+		fill #9E9E9E
+	&__image
+		margin-bottom 29px
+		width 765px
+		height 506px
+		img
+			max-width 100%
+			height auto
+	&__text
+		margin-bottom 27px
+		font-size 16px
+		font-weight 400
+		line-height 27px
+	&__bottom
+		border-top 1px dashed #ddd
+		padding-top 20px
+		clearfix()

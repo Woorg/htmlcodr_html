@@ -1,0 +1,27 @@
+body
+	background $bg
+	font-family $museo-sans
+	font-size 16px
+	color $text-color
+
+
+// .page
+
+.in
+	margin auto
+	width 1200px
+	min-width 1200px
+
+.button
+	display inline-block
+	&_more
+		padding 17px 34px 15px 24px
+		float left
+		background-color $button-readmore
+		font-family $rubik-black
+		color $button-readmore-text
+		text-decoration none
+		transition all .3s ease
+		&:hover
+			background-color darken($button-readmore, 30)
+
