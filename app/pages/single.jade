@@ -1,0 +1,20 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/main-single/main-single
+include ../blocks/content-single/content-single
+include ../blocks/sidebar-single/sidebar-single
+
+include ../blocks/icon/icon
+
+block head
+	- var pageTitle = 'CSSSR Project Template';s
+
+block content
+	+header()
+	+main-single()
+		+content-single()
+		+sidebar-single()
+	+footer()
+

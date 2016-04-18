@@ -1,11 +1,11 @@
 .content
-	width 815px
+	width ratio-percentage(815,1200)
 	float left
-
-
+	+below(768px)
+		width 100%
 .article
 	margin-bottom 50px
-	padding 25px
+	padding 25px ratio-percentage(25,815) 25px
 	background $article-bg
 	box-shadow 0px 0px 2px 0px rgba( 0, 0, 0, .1)
 	clearfix()
@@ -14,9 +14,6 @@
 		text-decoration none
 		color $text-color
 
-		&:hover
-			.article__title
-				color lighten($headings-color, 20)
 	&__header
 		text-align center
 	&__category
@@ -28,21 +25,34 @@
 		color $headings-color
 	&__title
 		margin-bottom 21px
-		// font-family $rubik-medium
-		font-family $museo-sans
+		// font-family $museo-sans
+		font-family $rubik-medium
 		font-weight 700
 		font-size 42px
-		color $headings-color
+		color $color-bg
 		line-height 1.2
 		text-align left
-		transition all .3s ease
+		overflow hidden
+		text-overflow ellipsis
+		transition all .1s ease
+		+below(768px)
+			font-size 26px
+		span
+			border-bottom 1px solid transparent
+			transition all .1s ease
+		&:hover
+			span
+				// border-bottom 1px solid $headings-color2
+				border-bottom 1px solid $color-bg
+				color $color-bg10
 	&__details
-		margin-bottom 30px
+		margin-bottom 20px
 		font-size 0
 		text-align left
 		clearfix()
 	&__date
 		margin-right 48px
+		margin-bottom 10px
 		display inline-block
 		font-size 16px
 		color #9E9E9E
@@ -55,6 +65,7 @@
 		fill #9E9E9E
 	&__author
 		margin-right 48px
+		margin-bottom 10px
 		display inline-block
 		font-size 16px
 		color #9E9E9E
@@ -67,6 +78,7 @@
 		fill #9E9E9E
 	&__comments
 		margin-right 48px
+		margin-bottom 10px
 		display inline-block
 		font-size 16px
 		color #9E9E9E
@@ -79,9 +91,8 @@
 		fill #9E9E9E
 	&__image
 		margin-bottom 29px
-		width 765px
-		height 506px
 		img
+			position relative
 			max-width 100%
 			height auto
 	&__text
@@ -89,7 +100,11 @@
 		font-size 16px
 		font-weight 400
 		line-height 27px
+		+below(768px)
+			font-size 15px
 	&__bottom
 		border-top 1px dashed #ddd
 		padding-top 20px
 		clearfix()
+
+

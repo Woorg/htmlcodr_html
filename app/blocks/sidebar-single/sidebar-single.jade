@@ -1,14 +1,13 @@
-mixin sidebar()
-	+b.sidebar&attributes(attributes)
-
+mixin sidebar-single()
+	+b.sidebar.sidebar-single&attributes(attributes)
 
 		+b.subscribe.sidebar-block
 			+e('h2').title Подпишитесь на обновления
 			+e('p').text Введите свою почту и раз в неделю мы будем присылать вам самые популярные материалы
-			+e('form').form#mg-email-form-wrap(onsubmit="return false;")
-				+e('input').input#mg-mailer-email(type='email' placeholder='Введите свою почту')
-				+e('input').submit#mg-mailer-email-button(type='submit' value="Отправить")
-				+e#mg-form-error
+			+e('form').form
+				+e('input').input(type='text' placeholder='Введите свою почту')
+				+e('input').submit(type='submit' value="Отправить")
+
 		+b.vital
 			+e.w
 				| <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -55,7 +54,6 @@ mixin sidebar()
 
 			+e#vk-group
 
-
 		+b.vital._second._sticky
 			+e.w
 				| <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -68,6 +66,4 @@ mixin sidebar()
 				| <script>
 				| (adsbygoogle = window.adsbygoogle || []).push({});
 				| </script>
-
-
 

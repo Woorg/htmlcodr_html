@@ -1,0 +1,43 @@
+.breadcrumbs
+	margin-bottom 30px
+	padding-left 30px
+	padding-right 30px
+	&__list
+		font-size 0
+		clearfix()
+	a
+		display inline-block
+		vertical-align middle
+	a,
+	strong,
+	span
+		font-family $museo-sans
+		font-size 19px
+		color $color-bg
+		text-decoration none
+		line-height 25px
+	a
+		position relative
+		margin-right 24px
+		margin-bottom 2px
+		display inline-block
+		vertical-align middle
+		border-bottom 1px solid $color-bg
+		&:hover
+			// border-bottom 1px solid $col
+			color $color-bg10
+		&:after
+			position absolute
+			content ">"
+			bottom -2px
+			right -20px
+
+	&__item
+		padding-right 30px
+		&:last-child
+			padding-right 0
+
+
+
+
+

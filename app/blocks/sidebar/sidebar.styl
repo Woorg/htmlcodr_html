@@ -1,9 +1,13 @@
 .sidebar
 	float right
 	width 347px
+	+below(1200px)
+		width ratio-percentage(347,1200)
+	+below(768px)
+		display none
 .sidebar-block
 	margin-bottom 40px
-	padding 25px 30px
+	padding 25px ratio-percentage(30,347) 25px
 	background-color $sidebar-block-bg
 	box-shadow 0px 0px 2px 0px rgba( 0, 0, 0, .1)
 	&__title
@@ -20,13 +24,14 @@
 		line-height 18px
 		// adv block
 .vital
+	margin-bottom 30px
 	padding 0
 	// background-color $sidebar-block-bg
 	background-color transparent
 	text-align center
 	&__title
 		margin-bottom 5px
-		font-family $rubik-black
+		font-family $rubik-bold
 		font-size 18px
 		font-weight 400
 		letter-spacing 0.06px
@@ -35,11 +40,32 @@
 		color $headings-title
 		// subscribe block
 	&__w
-		display inline-block
+		display block
+		width 100%
+		height auto
+
 	&_sticky
 		top 0
 .subscribe
-	background-color #0D47A1
+	// background-color darken($subscribe-bg13, 10)
+	// background-color $subscribe-bg13
+	// background-color $subscribe-bg14
+	// background-color $subscribe-bg18
+
+	// background-color $color-bg
+	// background-color $color-bg4
+	// background-color $color-bg6 // orange
+	// background-color $color-bg7
+	// background-color $color-bg8 // cool
+	// background-color darken($color-bg10,10) // cool
+	// background-color darken($color-bg10,20) // 4+
+	background-color $color-bg15
+	// background-color $color-bg17
+	// background-color $color-bg19
+
+
+	// background-color $color-bg4
+
 	&__title
 		margin-bottom 30px
 		font-family $rubik-black
@@ -65,21 +91,21 @@
 		padding 17px 10px
 		width 100%
 		display block
-		background-color $button-subscribe
+		background-color $color-bg10
 		font-family $rubik-bold
 		text-align left
 		color #FFF
 		transition background-color .3s ease
 		&:hover
-			background-color $button-subscribe-hover
-
+			background-color lighten($color-bg, 60)
+			color $color-bg
 
 .social
 	&__title
+		margin-bottom 21px
 		font-family $rubik-black
 		font-size 26px
 		line-height 31px
-
 
 .tags
 	&__title
@@ -87,5 +113,73 @@
 		font-family $rubik-black
 		font-size 26px
 		line-height 31px
+	.wp-tag-cloud
+		font-size 0
+		clearfix()
+
+		li
+			display inline-block
+			vertical-align top
+		a
+			position relative
+			border 1px solid lighten($color-bg, 75)
+			border-width 1px 0 1px 1px
+			margin-right 15px
+			margin-bottom 10px
+			padding 5px 12px 5px 8px
+			display block
+			max-width 140px
+			height 28px
+			// background $color-bg14
+			background lighten($color-bg, 75)
+			font-family $rubik-black
+			font-size 0
+			color $color-bg
+			letter-spacing tracking(100)
+			text-decoration none
+			border-radius 3px 0 0 3px
+			span
+				max-width 152px
+				display inline-block
+				font-size 16px
+				white-space nowrap
+				overflow hidden
+				ellipsis()
+				text-shadow 0 1px 0px #fff
+			&:after
+				position absolute
+				content ""
+				top 50%
+				right 0
+				margin-top -3px
+				width 6px
+				height 6px
+				background #fff
+				border-radius 50%
+				z-index 1
+			&:before
+				position absolute
+				content ''
+				top -1px
+				right -10px
+				width 0
+				height 0
+				z-index 0
+				border-style solid
+				border-width 14px 0 14px 10px
+				border-color transparent transparent transparent lighten($color-bg,75)
+			&:hover
+				background-color $color-bg
+				color #fff
+				&:before
+					border-color transparent transparent transparent $color-bg
+				span
+					text-shadow none
+
+
+
+
+
+
 
 

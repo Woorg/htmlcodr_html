@@ -82,6 +82,9 @@ export default function makeWebpackConfig({
 			emitErrors: false,
 			emitWarning: true,
 			formatter: eslintFormatter({notify})
+		},
+		node: {
+			fs: "empty"
 		}
 	};
 }

@@ -4,24 +4,36 @@ body
 	font-size 16px
 	color $text-color
 
-
 // .page
+
+.page
+	&__wrapper
+		min-width 1200px
+		+below(1200px)
+			min-width 100%
 
 .in
 	margin auto
 	width 1200px
-	min-width 1200px
-
+	+below(1200px)
+		width 100%
 .button
 	display inline-block
+
 	&_more
 		padding 17px 34px 15px 24px
 		float left
-		background-color $button-readmore
+		background-color $color-bg15
 		font-family $rubik-black
-		color $button-readmore-text
+		color #fff
 		text-decoration none
 		transition all .3s ease
+		+below(768px)
+			width 100%
 		&:hover
-			background-color darken($button-readmore, 30)
+			// background-color lighten($color-bg, 60)
+			background-color $color-bg10
+			color $color-bg
 
+
+// links

@@ -2,8 +2,7 @@ mixin header()
 	+b.header&attributes(attributes)
 		+e.in
 			+b('a').logo(href='#index')
-				+icon('logo-icon').icon
-				| Htmlcodr
+				+icon('logo').icon
 			+b('nav').main-nav
 				+e('ul').list
 					+e('li').item
@@ -16,5 +15,3 @@ mixin header()
 						+e('a').link(href='#') Seo
 					+e('li').item
 						+e('a').link(href='#') Стартапы
-					+e('li').item
-						+e('a').link(href='#')

@@ -3,4 +3,7 @@ mixin footer()
 		+e.in
 			+e('small').copyright
 				| &copy; 2015 Htmlcodr. Все права защищены законом.
-			+e.created Сделано руками в Москве.
+			+e.created Сделано
+				+e('a').created-icon(href='//freelance.ru/Woorg' target='_blank')
+					+icon('hands')
+				| by Woorg.

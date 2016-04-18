@@ -1,2 +1,48 @@
 .pagination
 	display block
+	font-size 0
+	text-align left
+	+below(768px)
+		text-align center
+	&__w
+		display inline-block
+		vertical-align top
+	li
+		margin-left 30px
+		display inline-block
+		vertical-align top
+		font-family $rubik-black
+		font-size 32px
+		+below(510px)
+			font-size 20px
+		&:first-child
+			margin-left 0
+	a
+		border-bottom 1px solid $color-bg
+		color $color-bg
+		text-decoration none
+		&:hover
+			border-bottom 1px solid transparent
+			// color lighten($color-bg, 60)
+			color $color-bg10
+	span.current
+		border-bottom 1px solid transparent
+		color $color-bg
+	// &__link_disable
+
+	// &__link_backward
+		// svg
+		// 	width 30px
+		// 	height 30px
+		// 	fill $blue-color
+		// &:hover
+		// 	svg
+		// 		fill lighten($blue-color, 20)
+	// &__link_forward
+		// svg
+		// 	width 30px
+		// 	height 30px
+		// 	fill $blue-color
+		// &:hover
+			// svg
+				// fill lighten($blue-color, 20)

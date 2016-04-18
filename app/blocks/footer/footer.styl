@@ -1,3 +1,37 @@
 .footer
 	&__in
+		padding-top 20px
+		padding-bottom 20px
+		min-height 60px
 		@extends .in
+		+below(768px)
+			text-align center
+	&__copyright
+		margin-bottom 10px
+		display block
+		float left
+		line-height 19px
+		color $text-color
+		+below(768px)
+			float none
+	&__created
+		margin-top -3px
+		float right
+		color $text-color
+		+below(768px)
+			float none
+	&__created-icon
+		margin-right 4px
+		display inline-block
+		vertical-align middle
+		svg
+			width 25px
+			height 25px
+			fill $color-bg
+		&:hover
+			svg
+				// fill lighten($color-bg,60)
+				fill $color-bg10
+
+
+

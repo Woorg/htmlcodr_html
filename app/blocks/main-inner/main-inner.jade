@@ -1,0 +1,9 @@
+include ../content-inner/content-inner
+include ../sidebar-inner/sidebar-inner
+
+
+mixin main-inner()
+	+b.main-inner&attributes(attributes)
+		+e.in
+			+content-inner()
+			+sidebar-inner()

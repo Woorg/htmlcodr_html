@@ -1,7 +1,8 @@
 include ../pagination/pagination
 
-mixin content()
-	+b.content&attributes(attributes)
+
+mixin content-inner()
+	+b.content-inner&attributes(attributes)
 		+b('article').article
 			+e('a').link(href='#article')
 				+e('header').header

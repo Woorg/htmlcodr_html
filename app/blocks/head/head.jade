@@ -1,6 +1,6 @@
 head
 	meta(charset='utf-8')
-	meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
 	meta(http-equiv='X-UA-Compatible' content='IE=edge')
 	meta(name='imagetoolbar' content='no')
 	meta(name='msthemecompatible' content='no')
@@ -17,23 +17,23 @@ head
 	meta(name='apple-mobile-web-app-capable' content='yes')
 	meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
 
-	link(sizes='57x57'   href='/apple-touch-icon-57x57.png'   rel='apple-touch-icon')
-	link(sizes='114x114' href='/apple-touch-icon-114x114.png' rel='apple-touch-icon')
-	link(sizes='72x72'   href='/apple-touch-icon-72x72.png'   rel='apple-touch-icon')
-	link(sizes='144x144' href='/apple-touch-icon-144x144.png' rel='apple-touch-icon')
-	link(sizes='60x60'   href='/apple-touch-icon-60x60.png'   rel='apple-touch-icon')
-	link(sizes='120x120' href='/apple-touch-icon-120x120.png' rel='apple-touch-icon')
-	link(sizes='76x76'   href='/apple-touch-icon-76x76.png'   rel='apple-touch-icon')
-	link(sizes='152x152' href='/apple-touch-icon-152x152.png' rel='apple-touch-icon')
-	link(sizes='180x180' href='/apple-touch-icon-180x180.png' rel='apple-touch-icon')
+	link(sizes='57x57'   href='apple-touch-icon-57x57.png'   rel='apple-touch-icon')
+	link(sizes='114x114' href='apple-touch-icon-114x114.png' rel='apple-touch-icon')
+	link(sizes='72x72'   href='apple-touch-icon-72x72.png'   rel='apple-touch-icon')
+	link(sizes='144x144' href='apple-touch-icon-144x144.png' rel='apple-touch-icon')
+	link(sizes='60x60'   href='apple-touch-icon-60x60.png'   rel='apple-touch-icon')
+	link(sizes='120x120' href='apple-touch-icon-120x120.png' rel='apple-touch-icon')
+	link(sizes='76x76'   href='apple-touch-icon-76x76.png'   rel='apple-touch-icon')
+	link(sizes='152x152' href='apple-touch-icon-152x152.png' rel='apple-touch-icon')
+	link(sizes='180x180' href='apple-touch-icon-180x180.png' rel='apple-touch-icon')
 
-	link(sizes='192x192' href='/favicon-192x192.png' rel='icon' type='image/png')
-	link(sizes='160x160' href='/favicon-160x160.png' rel='icon' type='image/png')
-	link(sizes='96x96'   href='/favicon-96x96.png'   rel='icon' type='image/png')
-	link(sizes='16x16'   href='/favicon-16x16.png'   rel='icon' type='image/png')
-	link(sizes='32x32'   href='/favicon-32x32.png'   rel='icon' type='image/png')
+	link(sizes='192x192' href='favicon-192x192.png' rel='icon' type='image/png')
+	link(sizes='160x160' href='favicon-160x160.png' rel='icon' type='image/png')
+	link(sizes='96x96'   href='favicon-96x96.png'   rel='icon' type='image/png')
+	link(sizes='16x16'   href='favicon-16x16.png'   rel='icon' type='image/png')
+	link(sizes='32x32'   href='favicon-32x32.png'   rel='icon' type='image/png')
 
-	link(rel='manifest' href='/manifest.json')
+	link(rel='manifest' href='manifest.json')
 
 	meta(name='application-name' content=pageTitle || '')
 	meta(name='msapplication-tooltip' content=pageDescription || '')
@@ -53,4 +53,14 @@ head
 	meta(name='description' content=pageDescription || '')
 	meta(name='keywords' content=pageKeywords || '')
 
-	link(href='/assets/styles/app.min.css?t=' + timestamp rel='stylesheet')
+	|<!--[if lt IE 9 ]<script src='assets/scripts/html5shiv.min.js'><![endif]-->
+
+	script.
+		!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(t){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
+
+	script#loadcss.
+		loadCSS( "assets/styles/app.min.css", document.getElementById("loadcss") );
+
+	| <noscript><link rel='stylesheet' href='assets/styles/app.min.css'></noscript>
+
+
